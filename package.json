@@ -1,5 +1,5 @@
 {
-	"name": "device-dashboard",
+	"name": "device-dashboard-ayesha-iftikhar",
 	"version": "1.0.0",
 	"description": "relayr frontend hiring test",
 	"main": "index.js",
@@ -46,6 +46,6 @@
 		"restify-cors-middleware": "^1.1.1",
 		"webpack": "^4.19.1",
 		"webpack-cli": "^3.3.12",
-		"webpack-dev-server": "3.1.14"
+		"webpack-dev-server": "^3.11.0"
 	}
 }
