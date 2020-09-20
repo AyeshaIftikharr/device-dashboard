@@ -1,6 +1,6 @@
 import React from 'react';
 import { ToastContainer } from 'react-toastify';
-import { DeviceReadingsPage } from './components/device-readings-page';
+import { DeviceReadingsPage } from './components';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const App = () => (

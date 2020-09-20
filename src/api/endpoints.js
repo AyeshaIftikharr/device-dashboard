@@ -1,2 +1,2 @@
 // Different endpoints of micro-services
-export const API_URL = 'http://localhost:9001';
+export const API_URL = 'http://localhost:8888';
