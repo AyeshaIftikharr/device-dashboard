@@ -8,8 +8,8 @@
 		"start:app": "webpack-dev-server --mode development --open",
 		"start:api": "node api-server.js",
 		"lint": "eslint --debug src/",
-    "lint:write": "eslint --debug src/ --fix",
-    "prettier": "prettier --write src/**/*.js"
+		"lint:write": "eslint --debug src/ --fix",
+		"prettier": "prettier --write src/**/*.js"
 	},
 	"babel": {
 		"presets": [
@@ -45,7 +45,7 @@
 		"restify": "^8.5.1",
 		"restify-cors-middleware": "^1.1.1",
 		"webpack": "^4.19.1",
-		"webpack-cli": "^3.2.3",
+		"webpack-cli": "^3.3.12",
 		"webpack-dev-server": "3.1.14"
 	}
 }
