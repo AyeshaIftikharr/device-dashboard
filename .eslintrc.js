@@ -40,7 +40,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
 
     'prefer-destructuring': 'off',
-
+    'import/prefer-default-export': 'off',
     'jsx-quotes': ['error', 'prefer-single'],
 
     'react/no-find-dom-node': 'off',
