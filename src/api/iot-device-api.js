@@ -1,5 +1,5 @@
 import axios from 'axios';
-import * as c from './constants';
+import * as c from './endpoints';
 
 const PARAMS = ({ methodType = 'GET' }) => ({
   method: methodType,
@@ -16,8 +16,8 @@ export const IOTDeviceAPI = {
     });
     return data;
   },
-  onUpdateDeviceReadingStatus: async ({ readingName, stateValue }) => {
-    const URL = `${c.API_URL}/devices/${readingName}?active=${stateValue}`;
+  onUpdateDeviceReadingStatus: async ({ readingName, statusValue }) => {
+    const URL = `${c.API_URL}/devices/${readingName}?active=${statusValue}`;
     const { data } = await axios(URL, {
       ...PARAMS({ methodType: 'PATCH' }),
     });

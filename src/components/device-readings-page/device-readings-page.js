@@ -11,6 +11,19 @@ import { extractErrorMessage } from '../../utils';
 // styles
 import './styles.css';
 
+// utility Function
+const getUpdatedList = (list, readingName, statusValue) => {
+  return list.map((item) => {
+    if (item.name === readingName) {
+      return {
+        ...item,
+        active: statusValue,
+      };
+    }
+    return item;
+  });
+};
+
 export const DeviceReadingsPage = () => {
   const [deviceReadingsList, setDeviceReadingsList] = useState([]);
   const [filteredDeviceReadingsList, setFilteredDeviceReadingsList] = useState([]);
@@ -36,7 +49,6 @@ export const DeviceReadingsPage = () => {
       setFilteredDeviceReadingsList(deviceReadingsList);
       return;
     }
-
     const filteredList = deviceReadingsList.filter((item) => item.name.includes(readingName));
     setFilteredDeviceReadingsList(filteredList);
   };
@@ -45,8 +57,21 @@ export const DeviceReadingsPage = () => {
     onFilterDeviceReadingList(e.target.value);
   };
 
+  const onToggleReadingStatus = async (readingName, statusValue) => {
+    try {
+      await IOTDeviceAPI.onUpdateDeviceReadingStatus({ readingName, statusValue });
+      setDeviceReadingsList(getUpdatedList(deviceReadingsList, readingName, statusValue));
+      setFilteredDeviceReadingsList(
+        getUpdatedList(filteredDeviceReadingsList, readingName, statusValue),
+      );
+      toast.success('Status updated successfully!');
+    } catch (error) {
+      toast.error('Something went wrong! Unable to change status');
+    }
+  };
+
   return (
-    <>
+    <main>
       {/* Counter */}
       <StatusCounter deviceReadingsList={filteredDeviceReadingsList} />
 
@@ -61,10 +86,14 @@ export const DeviceReadingsPage = () => {
       {/* Readings List */}
       <div className='row'>
         {filteredDeviceReadingsList.map((item) => (
-          <DeviceReadingItem key={item.name} {...item} />
+          <DeviceReadingItem
+            key={item.name}
+            item={item}
+            onToggleReadingStatus={onToggleReadingStatus}
+          />
         ))}
         {!filteredDeviceReadingsList.length && <EmptyPlaceholder />}
       </div>
-    </>
+    </main>
   );
 };
