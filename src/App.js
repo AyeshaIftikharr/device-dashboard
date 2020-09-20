@@ -1,13 +1,18 @@
 import React from 'react';
-import './styles.css';
+import { ToastContainer } from 'react-toastify';
+import { DeviceReadingsPage } from './components/device-readings-page';
+import 'react-toastify/dist/ReactToastify.css';
 
-function App() {
-  return (
-    <div className='instructions'>
-      <h1>Relayr Device Dashboard</h1>
-      <p>Feel free to implement UI the way you like.</p>
-    </div>
-  );
-}
-
-export default App;
+export const App = () => (
+  <>
+    <ToastContainer
+      position='top-right'
+      autoClose={2000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      draggable
+    />
+    <DeviceReadingsPage />
+  </>
+);

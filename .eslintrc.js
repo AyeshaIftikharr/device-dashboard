@@ -25,7 +25,7 @@ module.exports = {
     'no-plusplus': 'off',
     'space-before-function-paren': 0, // Incompatible with prettier
 
-    'max-len': ['error', 100, 2, { ignoreUrls: true }], // airbnb is allowing some edge cases
+    'max-len': ['error', 120, 2, { ignoreUrls: true }], // airbnb is allowing some edge cases
     'no-console': 'error', // airbnb is using warn
     'no-alert': 'error', // airbnb is using warn
 
