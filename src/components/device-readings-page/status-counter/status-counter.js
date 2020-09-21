@@ -20,11 +20,19 @@ const getStatusCount = (deviceReadingsList) => {
 export const StatusCounter = ({ deviceReadingsList }) => {
   const counter = getStatusCount(deviceReadingsList);
   return (
-    <div className='row'>
-      <h3>Active</h3>
-      <p>{counter.activeCount}</p>
-      <h3>InActive</h3>
-      <p>{counter.inActiveCount}</p>
+    <div className='counter-section paper'>
+      <p className='heading2-black'>Counter</p>
+      <hr />
+      <div className='row justify-space-between'>
+        <div className='column half-width margin-top'>
+          <p className='heading-gray'>Active</p>
+          <p>{counter.activeCount}</p>
+        </div>
+        <div className='column half-width margin-top'>
+          <p className='heading-gray'>InActive</p>
+          <p>{counter.inActiveCount}</p>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,4 +1,22 @@
-.column {
-  margin: 20px;
-  background-color: #e6e6ef;
+.paper {
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.10), 0 4px 4px rgba(0,0,0,0.10);
+}
+
+.counter-section {
+  width: 30%;
+}
+
+hr {
+  margin: 0;
+  margin-top: 10px;
+  background-color: #d4d6d8;
+  border: none;
+  height: 1px;
+}
+
+.half-width {
+ width: 40%;
 }

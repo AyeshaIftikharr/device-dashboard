@@ -13,21 +13,6 @@ export const extractErrorMessage = (error) => {
 };
 
 export const getFormattedDate = (timeStamp) => {
-  const MONTHS = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec',
-  ];
-
   const date = new Date(timeStamp);
-  return `${MONTHS[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+  return `${date.toUTCString()}`;
 };

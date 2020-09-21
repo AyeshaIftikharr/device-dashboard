@@ -1,19 +1,13 @@
-.column {
-  margin: 20px;
-  background-color: #e6e6ef;
+.reading-item-section {
+  margin: 10px 20px 10px 0;
+  width: 28%;
 }
-
-
-
-
-
-
 
 .switch {
   position: relative;
   display: inline-block;
   width: 50px;
-  height: 24px;
+  height: 22px;
 }
 
 .switch input { 
@@ -37,21 +31,21 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 18px;
-  width: 18px;
+  height: 16px;
+  width: 16px;
   left: 4px;
-  bottom: 4px;
+  bottom: 3px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #37b44e;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #37b44e;
 }
 
 input:checked + .slider:before {

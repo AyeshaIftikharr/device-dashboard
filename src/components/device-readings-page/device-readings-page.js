@@ -72,16 +72,20 @@ export const DeviceReadingsPage = () => {
 
   return (
     <main>
-      {/* Counter */}
-      <StatusCounter deviceReadingsList={filteredDeviceReadingsList} />
-
-      {/* Search Input */}
-      <input
-        type='text'
-        placeholder='Search by name'
-        name='search'
-        onChange={onChangeSearchInputText}
-      />
+      {/* Search Input & Counter */}
+      <div className='row spacer'>
+        <div className='input-section'>
+          <p className='heading2'>Device Readings Dashboard - Ayesha Iftikhar</p>
+          <input
+            type='text'
+            placeholder='Search by name'
+            name='search'
+            onChange={onChangeSearchInputText}
+            className='text-input'
+          />
+        </div>
+        <StatusCounter deviceReadingsList={filteredDeviceReadingsList} />
+      </div>
 
       {/* Readings List */}
       <div className='row'>
