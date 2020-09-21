@@ -35,7 +35,9 @@ export const DeviceReadingsPage = () => {
       setFilteredDeviceReadingsList(response.data);
     } catch (error) {
       const errorMessage = extractErrorMessage(error);
-      toast.error(errorMessage);
+      toast.error(
+        `Unable to fetch readings! Make sure api server is running! Possible reason: ${errorMessage}`,
+      );
     }
   };
 
@@ -73,7 +75,7 @@ export const DeviceReadingsPage = () => {
   return (
     <main>
       {/* Search Input & Counter */}
-      <div className='row spacer'>
+      <div className='row spacer justify-center'>
         <div className='input-section'>
           <p className='heading2'>Device Readings Dashboard - Ayesha Iftikhar</p>
           <input

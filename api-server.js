@@ -2,7 +2,7 @@ const restify = require('restify');
 const { plugins } = restify;
 const corsMiddleware = require('restify-cors-middleware');
 const ipAddress = '127.0.0.1';
-const port = '8888';
+const port = '8889';
 const deviceReadings = require('./deviceReadings.js');
 
 const server = restify.createServer();

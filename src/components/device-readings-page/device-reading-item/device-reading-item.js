@@ -16,9 +16,9 @@ export const DeviceReadingItem = ({
         </div>
         <div className='column half-width'>
           <p className='heading-gray'>Toggle Status</p>
-          <label className='switch' htmlFor='toggle'>
+          <label className='switch' htmlFor={name}>
             <input
-              id='toggle'
+              id={name}
               type='checkbox'
               checked={activeStatus}
               onChange={() => onToggleReadingStatus(name, !activeStatus)}
