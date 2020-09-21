@@ -2,6 +2,13 @@
 
 # Relayr Frontend Challenge
 
+## How to run the application locally
+
+Using ```npm run start```, start the app twice it doesn't work for the first but gets loaded the second time for some reason. Also make sure the api server is running locally at the port mentioned in its configuration and add the localhost api server address with port in `src/api/endpoints` against `API_URL`.
+
+Here's a screenshot of the work done
+![Screenshot](Screenshot.png "Demo")
+
 ## Our Expectations
 
 This code challenge is based on the actual work we do here at Relayr. It's designed to see how you design and code a simple app based on real-world requirements.
